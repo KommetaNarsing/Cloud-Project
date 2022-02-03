@@ -11,9 +11,9 @@ def addRec(di):
 	db.append(di)
 
 def validate(username,password):
-   print(db)
-   for di in db:
-   	if (di['username'] == username and di['password']== password):
-     		return di
-   return False
+      print(db)
+      for di in db:
+            if (di['username'] == username and di['password']== password):
+                  return di
+      return False
 

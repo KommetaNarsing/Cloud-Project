@@ -38,8 +38,9 @@ def count_me(input_str):
 def login():
     username = str(request.form['username'])
     password = str(request.form['password'])
-    if validate(username,password):
-	return "<center><h2> Hi "+username+ "<br> Your Name is "+ di['firstname'] +"  "+ di['lastname'] +"<br> your email id is "+di['email'] + "</h2></center>"
+    r=validate(username,password)
+    if r:
+        return "<center><h2> Hi "+username+ "<br> Your Name is "+ r['firstname'] +"  "+ r['lastname'] +"<br> your email id is "+r['email'] + "</h2></center>"
     return render_template('invlogin.html')
 if __name__ == '__main__':
  # app.secret_key = os.urandom(12)
